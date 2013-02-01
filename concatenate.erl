@@ -6,7 +6,7 @@ concat(List) ->
     concat(List, []).
 
 concat([], List) ->
-    List;
+    lists:reverse(List);
 concat([[]|T], List) ->
     concat(T, List);
 concat([[H|T1]|T2], List) ->
